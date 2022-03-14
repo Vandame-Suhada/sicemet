@@ -1,0 +1,193 @@
+<!DOCTYPE html >
+<html>
+<head>
+
+<title>SiCemet</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Favicons -->
+  <link href="assets/img/logo_sicemet.png" rel="icon">
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+       <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <img src="assets/img/logo_sicemet.png" alt="Logo" style="width:250px;height:70px;">
+      <nav class="main-nav d-none d-lg-block">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html #about">About Us</a></li>
+          <li class="active"><a href="#services">Metodologi</a></li>
+          <!--<li><a href="#portfolio">Portfolio</a></li>-->
+          <li><a href="index.html #team">Our Team</a></li>
+          
+          <li><a href="index.html #footer">Contact</a></li>
+        </ul>
+      </nav><!-- .main-nav-->
+
+    </div>
+  </header><!-- End Header -->
+
+  <section id="hero" class="about section-bg">
+    <div class="container" style="position: absolute;left: 100px; top: 150px;" >
+        <center>
+            <h1>Kenali Proyek Anda</h1> <br>
+        </center>
+
+
+        <form action="validasi.php" class="form-horizontal" method="GET" onsubmit="return checkFormData()">
+            <div class="form-group">
+                <label class="control-label col-sm-4">Kebutuhan awal</label>
+                <div class="col-sm-5" >
+                    <div class='row'>
+                        <div class='col-sm-4  col-sm-4'>
+                            <input type="radio" name="radio1" id="jls" tabindex="1" value="DapatDijelaskan" /> Dapat Dijelaskan<br />
+                        </div>
+                        <div class='col-sm-4 col-sm-4'>
+                            <input type="radio" name="radio1" id="tdk_jls" tabindex="1" value="BelumJelas" /> Belum Jelas<br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-4">Kompleksitas</label>
+                <div class="col-sm-5">
+                    <div class='row'>
+                        <div class='col-sm-4 col-sm-4'>
+                            <input type="radio" name="radio2" id="sederhana" tabindex="2" value="Sederhana" /> Sederhana<br />
+                        </div>
+                        <div class='col-sm-4 col-sm-4'>
+                            <input type="radio" name="radio2" id="kompleks" tabindex="2" value="Kompleks" /> Kompleks<br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-4">Waktu Delivery</label>
+                <div class="col-sm-5">
+                    <div class='row'>
+                        <div class='col-sm-4  col-sm-4'>
+                            <input type="radio" name="radio3" id="krng1bln" tabindex="3" value="<1bulan" />< 1 Bulan<br />
+                        </div>
+                        <div class='col-sm-4 col-sm-4'>
+                            <input type="radio" name="radio3" id="satubln" tabindex="3" value="1-3bulan" /> 1-3 Bulan<br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div class="form-group">
+                <label class="control-label col-sm-4">Tim Sdm</label>
+                <div class="col-sm-5">
+                    <div class='row'>
+                        <div class='col-sm-4 col-sm-4'>
+                            <input type="radio" name="radio4" id="min12" tabindex="1" value="<12Orang" /> < 12 Orang <br />
+                        </div>
+                        <div class='col-sm-4 col-sm-4'>
+                            <input type="radio" name="radio4" id="plus12" tabindex="1" value=">12Orang" /> > 12 Orang <br />
+                        </div>
+                    </div>
+                </div>
+				
+            </div>
+			<div class="form-group">
+                <label class="control-label col-sm-4">Keterampilan Tim</label>
+                <div class="col-sm-5">
+                    <div class='row'>
+                        <div class='col-sm-4 col-sm-4'>
+                            <input type="radio" name="radio5" id="berpengalaman" tabindex="2" value="Berpengalaman" /> Berpengalaman<br />
+                        </div>
+                        <div class='col-sm-4 col-sm-2'>
+                            <input type="radio" name="radio5" id="campuran" tabindex="2" value="Campuran" /> Campuran<br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div class="form-group">
+                <label class="control-label col-sm-4">Klien Terlibat Langsung</label>
+                <div class="col-sm-5">
+                    <div class='row'>
+                        <div class='col-sm-4 col-sm-4'>
+                            <input type="radio" name="radio6" id="terlibat" tabindex="1" value="Terlibat"/> Terlibat <br />
+                        </div>
+                        <div class='col-sm-4'>
+                            <input type="radio" name="radio6" id="tidakterlibat" tabindex="1" value="TidakTerlibat" /> Tidak Terlibat <br />
+                        </div>
+                    </div>
+                </div>
+			</div> <br>
+            <div class="form-group">
+                <div class="col-sm-offset-4 col-sm-5">
+                    <input type="submit" class="btn btn-success" value="Cek Metodologi" style="position: absolute;right:0px;">
+                	
+                </div>
+            </div>
+        </form>
+        <font color='red'><p id="errMessage"></p> </font>
+    </div>
+  </section><!-- End Hero -->
+
+</body>
+<script>
+    function checkFormData() {
+        var rd1 = document.getElementById("radio1");
+        var rd2 = document.getElementById("radio2");
+        var rd3 = document.getElementById("radio3");
+        var rd4 = document.getElementById("radio4");
+        var rd5 = document.getElementById("radio5");
+        var rd6 = document.getElementById("radio6");
+
+
+        if (!$('input[name=radio1]:checked').length > 0) {
+            document.getElementById("errMessage").innerHTML = "Kebutuhan awal tidak boleh kosong";
+            return false;
+        }
+        if (!$('input[name=radio2]:checked').length > 0) {
+            document.getElementById("errMessage").innerHTML = "Kompleksitas tidak boleh kosong";
+            return false;
+        }
+        if (!$('input[name=radio3]:checked').length > 0) {
+            document.getElementById("errMessage").innerHTML = "Waktu delivery tidak boleh kosong";
+            return false;
+        }
+        if (!$('input[name=radio4]:checked').length > 0) {
+            document.getElementById("errMessage").innerHTML = "Tim SDM tidak boleh kosong";
+            return false;
+        }
+        if (!$('input[name=radio5]:checked').length > 0) {
+            document.getElementById("errMessage").innerHTML = "Keterampilan Tim tidak boleh kosong";
+            return false;
+        }
+        if (!$('input[name=radio6]:checked').length > 0) {
+            document.getElementById("errMessage").innerHTML = "Bagian klien tidak boleh kosong";
+            return false;
+        }
+        
+
+
+        
+    }
+    document.querySelector('#cek')
+        .addEventListener('click',() => {
+            window.location.href = 'index.html';
+        })
+</script>
+<script>
+
+</script>
+</html>
